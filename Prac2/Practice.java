@@ -7,12 +7,13 @@ class Practice{
         System.out.println("Select your choice: \n 1. Factorial \n 2. Reverse of a number \n 3. Armstrong number \n 4. Palindrome \n 5.Prime Number \n 6. Fibonacci series");
 
         Scanner sc = new Scanner(System.in);
-        int choice = 4;
+        int choice = sc.nextInt();
         int num;
         
         switch(choice){
             case 1: 
-                num = 5;
+                System.out.println("Enter a number to find factorial");
+                num = sc.nextInt();
                 int fact = 1;
 
                 for(int i=1; i<=num; i++){
@@ -24,7 +25,8 @@ class Practice{
             
 
             case 2: 
-                num = 302;
+                System.out.println("Enter a number to find its reverse");
+                num = sc.nextInt();
                 int newNum = 0;
                 
                 while(num>1){
@@ -39,7 +41,8 @@ class Practice{
 
             case 3: 
                 //ArmStrong number
-                int staticNum = 321;
+                System.out.println("Enter a number to find if it is an Armstrong number");
+                int staticNum = sc.nextInt();
                 num = staticNum;
                 int sum=0;
                 int digit;
@@ -61,7 +64,8 @@ class Practice{
 
             case 4: 
                 //Palindrome
-                String str = "xyza";
+                System.out.println("Enter a string to find if its palindrome or not");
+                String str = sc.next();
                 boolean flag = true;
 
                 for(int i=0; i<str.length()-1; i++){
@@ -80,7 +84,8 @@ class Practice{
 
 
             case 5:
-                num = 8;
+                System.out.println("Enter a number to find if it is prime");
+                num = sc.nextInt();
                 boolean indicator = true;
                 
                 for(int i=1; i<=num/2+1; i++){
@@ -98,7 +103,9 @@ class Practice{
 
 
             case 6: 
-                int n1=0, n2=1, temp=0, limit=5;
+                int n1=0, n2=1, temp=0;
+                System.out.println("Enter the limit of fibonacci series");
+                int limit = sc.nextInt();
 
                 System.out.println(n1);
                 System.out.println(n2);
